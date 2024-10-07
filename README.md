@@ -18,12 +18,15 @@ $ poetry install
 
 [see the official documentation](https://mlflow.org/docs/latest/getting-started/intro-quickstart/index.html)
 
-````bash
 Launch the mlflow server
 
 ```bash
-$ mlflow server --host 127.0.0.1 --port 8080
-````
+$ mlflow server --port 8080
+```
+
+MLflow runs on port 5000 by default.
+But a system process may already be using that port on MacOS.
+You can specify a different port by setting the `--port` flag.
 
 You can access the mlflow UI at [http://localhost:8080](http://localhost:8080)
 

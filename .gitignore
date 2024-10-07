@@ -271,3 +271,4 @@ $RECYCLE.BIN/
 # Mlflow Server
 mlruns/
 mlartifacts/
+basic_auth.db

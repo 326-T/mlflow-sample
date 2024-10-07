@@ -1,4 +1,5 @@
-POST http://localhost:5000/invocations
+### Predict from input data
+POST http://localhost:8080/invocations
 Content-Type: application/json
 
 {
@@ -20,3 +21,20 @@ Content-Type: application/json
   }
 }
 
+### Search experiments
+POST http://localhost:8080/api/2.0/mlflow/experiments/search
+Content-Type: application/json
+Authorization: Basic YWRtaW46cGFzc3dvcmQ=
+
+{
+  "max_results": 100
+}
+
+### Search runs in experiment
+POST http://localhost:8080/api/2.0/mlflow/runs/search
+Content-Type: application/json
+Authorization: Basic YWRtaW46cGFzc3dvcmQ=
+
+{
+  "experiment_ids": ["983535187500980374"]
+}
